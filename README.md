@@ -1,5 +1,8 @@
 # Insta Scraper
-This is an instagram scraper. The scraper logs in with instagram username and password and then searches the keywords in the search input box. Upon search result, the scraper scrolls through and collect the image urls. Finally exports the images to a csv file.
+This is a web scraper that scrapes images from Instagram based on keyword
+
+## How it works
+The app receives the keyword from the user. After that it logs in with instagram username and password and then searches the keywords in the search input box. When search result appears, the scraper scrolls through the page and collect the image urls. Finally exports the images to a csv file.
 
 ## Technologies
 Python, Selenium, Pandas etc
