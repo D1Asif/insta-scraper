@@ -7,10 +7,14 @@ from selenium.webdriver.support import expected_conditions as EC
 from dotenv import load_dotenv
 import os
 import pandas as pd
+from search_scraper import search
 
 load_dotenv()
 
 def main():
+    # Take the keyword from the user
+    keyword = search()
+    
     driver = webdriver.Chrome()
     url = "https://www.instagram.com/accounts/login/"
 
@@ -61,7 +65,7 @@ def main():
     # target the search input write the search term and press enter
     search_input = driver.find_element(By.CSS_SELECTOR, "input[placeholder='Search']")
     search_input.clear()
-    keyword="cat"
+    
     search_input.send_keys(f"#{keyword}")
 
     time.sleep(5)
